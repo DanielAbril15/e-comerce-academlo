@@ -93,6 +93,7 @@ nav .icons .icon-basket .count-products {
   display: grid;
   grid-template-rows: 1fr 0.5fr;
   width: 100%;
+  max-width: 1024px;
   height: auto;
   gap: 40px;
 }
@@ -140,6 +141,7 @@ nav .icons .icon-basket .count-products {
 .home .home_info .home_btns {
   display: flex;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 .home_discover-btn {
@@ -158,4 +160,99 @@ nav .icons .icon-basket .count-products {
   color: var(--body-color);
   background-color: var(--button-color);
   border: none;
+}
+
+/*-------- Espacio de Productos------ */
+
+.products {
+  display: grid;
+  justify-content: center;
+  width: 100%;
+  max-width: 1024px;
+}
+/*-------- Eleccion de Productos------ */
+.products_sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 320px;
+  height: auto;
+  margin-bottom: 60px;
+}
+
+.products_sections .product_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.products_sections .product_info p:nth-child(1) {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--title-color);
+}
+
+.products_sections .product_info p:nth-child(2) {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: var(--text-color-light);
+}
+.show-all,
+.shirts,
+.hoodies {
+  border-right: 1px solid var(--text-color);
+}
+/*-------- imagenes de productos------ */
+
+/*-------- FOOTER------ */
+footer {
+  display: grid;
+  background-color: var(--card-color);
+  gap: 10px;
+}
+.footer {
+  display: grid;
+  gap: 30px;
+  margin: 60px 20px 20px 20px;
+}
+
+.footer .footer_info p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.footer .footer_info:nth-child(1) p:nth-child(2) {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.footer .about-us {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_product {
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  margin: 0px 20px;
+  padding: 30px;
+  color: var(--text-color);
+  border-top: 2px solid var(--change-navbar);
 }
