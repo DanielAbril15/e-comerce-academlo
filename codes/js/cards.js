@@ -1,4 +1,4 @@
-const productsA = [
+export const productsA = [
   {
     id: 1,
     name: "Hoodies",
@@ -34,13 +34,15 @@ export function printProduct(products) {
                     <div class="img-container">
                         <img src="${products[i].image}" alt="${products[i].name}">
                     </div>
-                    <div class="card-info">
+                    <div class="card-info" >
                         <div>
                             <p>${products[i].price}</p>
                             <span>Stock: ${products[i].stock}</span>
                         </div>
                         <p class="name-product">${products[i].name}</p>
-                        <button>+</button>
+                        
+                        <button class='add-btn' data-idbtn ='${products[i].id}' >+</button>
+                        
                     </div>
                     </div>`;
   }
