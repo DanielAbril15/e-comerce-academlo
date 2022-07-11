@@ -57,22 +57,22 @@
         <section class="products">
             <div class="products_sections">
 
-                <div class="product_info show-all">
+                <div class="product_info show-all" data-filter="all">
                     <p>Show All</p>
                     <p>show all products</p>
                 </div>
 
-                <div class="product_info hoodies">
+                <div class="product_info hoodies" data-filter=".ho">
                     <p>Hoodies</p>
                     <p>3 products</p>
                 </div>
 
-                <div class="product_info shirts">
+                <div class="product_info shirts" data-filter=".sh">
                     <p>Shirts</p>
                     <p>4 products</p>
                 </div>
 
-                <div class="product_info sweatshirts">
+                <div class="product_info sweatshirts" data-filter=".sw">
                     <p>Sweatshirts</p>
                     <p>4 products</p>
                 </div>
@@ -118,7 +118,12 @@
         </section>
     </footer>
 
-    <script src="./codes/js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+        integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script type="module" src="./codes/js/main.js"></script>
 </body>
 
 </html>

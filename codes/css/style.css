@@ -39,6 +39,7 @@ nav {
   position: fixed;
   z-index: 500;
   background-color: transparent;
+  transition: background-color 0.5s;
 }
 .change-navbar {
   background-color: var(--change-navbar);
@@ -188,6 +189,9 @@ nav .icons .icon-basket .count-products {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.product_info:hover {
+  cursor: pointer;
 }
 
 .products_sections .product_info p:nth-child(1) {
