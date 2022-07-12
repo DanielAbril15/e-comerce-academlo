@@ -1,17 +1,18 @@
 import { nav } from "./navbar.js";
 import { printProduct, productsA } from "./cards.js";
+// import { mixer } from "./mixer.js";
 
 nav();
 printProduct(productsA);
 
-// var mixer = mixitup(".products_show-imgs", {
-//   selectors: {
-//     target: ".card-container",
-//   },
-//   animation: {
-//     duration: 300,
-//   },
-// });
+var mixer = mixitup(".products_show-imgs", {
+  selectors: {
+    target: ".card-container",
+  },
+  animation: {
+    duration: 300,
+  },
+});
 
 const carAmount = {};
 
@@ -24,21 +25,23 @@ document.addEventListener("click", function (e) {
         currentProduct = element;
       }
     });
-  }
-  if (carAmount[currentProduct.id]) {
-    carAmount[currentProduct.id].amount++;
-  } else {
-    carAmount[currentProduct.id] = currentProduct;
-    carAmount[currentProduct.id].amount = 1;
+    if (carAmount[currentProduct.id]) {
+      carAmount[currentProduct.id].amount++;
+    } else {
+      carAmount[currentProduct.id] = currentProduct;
+      carAmount[currentProduct.id].amount = 1;
+    }
+    console.log(carAmount);
   }
 });
-function printCar() {
-  let html = "";
-  for (const product in object) {
-    // if (product === currentProduct.id) {
-    //     html =
-    // }
-  }
-  if (carAmount.key) {
-  }
-}
+
+// function printCar() {
+//   let html = "";
+//   for (const product in object) {
+//     // if (product === currentProduct.id) {
+//     //     html =
+//     // }
+//   }
+//   if (carAmount.key) {
+//   }
+// }
