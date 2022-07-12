@@ -1,8 +1,25 @@
-import { nav } from "./navbar.js";
+import {
+  nav,
+  basketAction,
+  closeBasket,
+  optionAction,
+  closeOption,
+  homeC,
+  productC,
+} from "./navbar.js";
+
 import { printProduct, productsA } from "./cards.js";
-// import { mixer } from "./mixer.js";
+
+import { printCarts, printAmountCart } from "./printCart.js";
 
 nav();
+basketAction();
+closeBasket();
+optionAction();
+closeOption();
+homeC();
+productC();
+
 printProduct(productsA);
 
 var mixer = mixitup(".products_show-imgs", {
@@ -31,17 +48,8 @@ document.addEventListener("click", function (e) {
       carAmount[currentProduct.id] = currentProduct;
       carAmount[currentProduct.id].amount = 1;
     }
-    console.log(carAmount);
+
+    printCarts(carAmount);
+    printAmountCart(carAmount);
   }
 });
-
-// function printCar() {
-//   let html = "";
-//   for (const product in object) {
-//     // if (product === currentProduct.id) {
-//     //     html =
-//     // }
-//   }
-//   if (carAmount.key) {
-//   }
-// }
