@@ -14,27 +14,34 @@
 
     <header>
         <nav id="navbar">
-            <div class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav__logo-icon">
-                    <title>Academlo Logo</title>
-                    <g>
+            <div>
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav__logo-icon">
+                        <title>Academlo Logo</title>
                         <g>
+                            <g>
 
-                            <path
-                                d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
-                            </path>
+                                <path
+                                    d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                                </path>
+                            </g>
                         </g>
-                    </g>
-                </svg>
-                <p>STORE</p>
+                    </svg>
+                    <p>STORE</p>
+                    <div class="nav_menu-desktop">
+                        <a href="#home" class="home-desktop">Home</a>
+                        <a href="#product" class="product-desktop">Products</a>
+                    </div>
+                </div>
+                <div class="icons">
+                    <p class="icon-moon"></p>
+                    <p class="icon-basket" id="basket">
+                        <span class="count-products" id="amount-cart"></span>
+                    </p>
+                    <p class="icon-th-large" id="options"></p>
+                </div>
             </div>
-            <div class="icons">
-                <p class="icon-moon"></p>
-                <p class="icon-basket" id="basket">
-                    <span class="count-products" id="amount-cart"></span>
-                </p>
-                <p class="icon-th-large" id="options"></p>
-            </div>
+
         </nav>
     </header>
     <main>
@@ -65,6 +72,13 @@
 
         <section class="car-info" id="car-display">
             <p class="car_title">My Cart</p>
+            <div class="car_empty" id="car-empty">
+                <img src="./codes/img/empty-cart.png" alt="">
+                <p class="car_empty-title">Your cart is Empty</p>
+                <p class="car_empty-text">You can add items to your cart by clicking on the "+" button on the product
+                    page</p>
+            </div>
+
 
             <div class="print-car" id="print-cart">
             </div>

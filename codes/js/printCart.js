@@ -5,7 +5,7 @@ export function printCarts(object) {
   let html = "";
   for (const element in object) {
     html += `                           
-    <div class="car_container">
+    <div class="car_container " >
                             <div class="img-cart">
                                 <img src="${object[element].image}" alt="">
                             </div>
@@ -21,14 +21,16 @@ export function printCarts(object) {
                                   parseFloat(object[element].amount)
                                 ).toFixed(2)}
                                 </p>
-                                <div class="units">
-                                    <div>
+                                <div class="units" >
+                                    <div data-idcart='${object[element].id}'>
                                         <span class="icon-minus btn-amount"></span>
                                         <p>${object[element].amount} units</p>
                                         <span class="icon-plus btn-amount"></span>
                                     </div>
         
-                                    <div class="trash-container"><span class="icon-trash-empty trash"></span></div>
+                                    <div class="trash-container" data-idtrash='${
+                                      object[element].id
+                                    }'><span class="icon-trash-empty trash"></span></div>
                                 </div>
                             </div>
                         </div>`;
