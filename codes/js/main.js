@@ -65,7 +65,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-console.log(cartAm.classList);
 document.addEventListener("click", (e) => {
   const idButton = parseInt(e.target.parentElement.dataset.idcart);
   if (e.target.classList.contains("icon-minus")) {
@@ -77,7 +76,6 @@ document.addEventListener("click", (e) => {
         }
         if (Object.entries(carAmount).length === 0) {
           cartAm.classList.add("car_amount-zero");
-
           carEmpty.classList.remove("car_not-empty");
         }
       }
@@ -97,6 +95,21 @@ document.addEventListener("click", (e) => {
       }
       if (carAmount[element].amount > carAmount[element].stock) {
         alert("We dont have stock");
+      }
+    }
+    printCarts(carAmount);
+    printAmountCart(carAmount);
+  }
+});
+
+document.addEventListener("click", (e) => {
+  const idButton = parseInt(e.target.parentElement.dataset.idtrash);
+  for (const element in carAmount) {
+    if (idButton === carAmount[element].id) {
+      delete carAmount[element];
+      if (Object.entries(carAmount).length === 0) {
+        cartAm.classList.add("car_amount-zero");
+        carEmpty.classList.remove("car_not-empty");
       }
     }
     printCarts(carAmount);

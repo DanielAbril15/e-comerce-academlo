@@ -319,6 +319,10 @@ nav div .icons .icon-basket .count-products {
 .trash {
   color: var(--first-color);
 }
+.trash:hover {
+  cursor: pointer;
+  color: black;
+}
 /* Boton para cerrar My Cart */
 .btn-close {
   font-size: 2.4rem;
@@ -446,18 +450,19 @@ nav div .icons .icon-basket .count-products {
   display: grid;
   justify-content: center;
   width: 100%;
-  max-width: 1024px;
+
   height: auto;
   margin: auto;
 }
 /*-------- Eleccion de Productos------ */
 .products_sections {
   justify-self: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1027px;
   gap: 20px;
-  width: 320px;
   height: auto;
+  margin: auto;
   margin-bottom: 60px;
 }
 
@@ -466,6 +471,7 @@ nav div .icons .icon-basket .count-products {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 150px;
 }
 .product_info:hover {
   cursor: pointer;
@@ -571,13 +577,13 @@ footer {
 .footer {
   display: flex;
   margin-top: 60px;
-  margin-left: 30px;
+  padding-left: 30px;
   max-width: 1024px;
   flex-wrap: wrap;
   width: 100%;
 }
 .footer div {
-  width: 250px;
+  width: 220px;
 }
 
 .footer .footer_info p {
@@ -659,5 +665,16 @@ footer {
   }
   .home .home_info .home_info-p {
     font-size: 2rem;
+  }
+}
+@media (min-width: 1000px) {
+  .products_sections .product_info {
+    width: 200px;
+  }
+  .products_sections .product_info p:nth-child(1) {
+    font-size: 2.2rem;
+  }
+  .products_sections .product_info p:nth-child(2) {
+    font-size: 1.8rem;
   }
 }
